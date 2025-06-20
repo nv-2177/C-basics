@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h> 
+int main() {
+    int n,num,chk;
+    printf("Enter the number");
+    scanf("%d",&n);
+    num=n;
+    chk=num;
+    int ct=0;
+    while(n!=0){
+        n/=10;
+        ct+=1;
+    }
+    int sum=0;
+    while(num!=0){
+        int m=num%10;
+        sum+=pow(m,ct);
+        num/=10;
+    }
+    if(chk==sum){
+        printf("It is a armstrong number");
+    }
+    else{
+        printf("It is not a armstrong number");
+    }
+    return 0;
+}
