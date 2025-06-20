@@ -1,0 +1,26 @@
+#include <stdio.h>
+int factorial(int m){
+    int fac=1;
+    for(int i=1;i<=m;i++){
+        fac*=i;
+    }
+    return fac;
+}
+int main() {
+    int n,sum=0;
+    printf("Enter a number");
+    scanf("%d",&n);
+    int temp=n;
+    while(n!=0){
+        int m=n%10;
+        sum+=factorial(m);
+        n/=10;
+    }
+    if(temp==sum){
+        printf("It is a strong number");
+    }
+    else{
+        printf("It is not a strong number");
+    }
+    return 0;
+}
